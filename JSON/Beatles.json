@@ -2,7 +2,13 @@
   "The Beatles discography": [
     {
     "Title": "Please Please Me",
-    "Released": "22 March 1963"
+    "Released": "22 March 1963",
+    "Songs": [
+      "I Saw Her Standing There",
+      "Chains ",
+      "Boys "
+      ]
+    
   },
   {
     "Title": "With the Beatles",
@@ -10,7 +16,8 @@
   },
   {
     "Title": "A Hard Day’s Night",
-    "Released": "26 June 1964"
+    "Released": "26 June 1964",
+    "Label": "United Artists (US)"
   },
   {
     "Title": "Beatles For Sale",
@@ -18,15 +25,28 @@
   },
   {
     "Title": "Help!",
-    "Released": "6 August 1965"
+    "Released": "6 August 1965",
+    "Songs": [
+      "Help!",
+      "I Need You ",
+      "Another Girl"
+      ]
+    
   },
   {
     "Title": "Rubber Soul",
-    "Released": "3 December 1965"
+    "Released": "3 December 1965",
+    "Label": "Parlophone (UK)",
+    "Certifications": [
+      "BPI: Platinum",
+      "ARIA: Platinum",
+      "BVMI: Gold"
+      ]
   },
   {
     "Title": "Revolver",
-    "Released": "5 August 1966"
+    "Released": "5 August 1966",
+    "Label": "Label: Parlophone (UK)"
   },
   {
     "Title": "Sgt. Pepper’s Lonely Hearts Club Band",
