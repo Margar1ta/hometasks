@@ -1,44 +1,40 @@
-$(document).ready(function() {
+$(document).ready(function(){
 
-	$.getJSON('Beatles.json', function(object) {
-		$('#Boolean').text(object.Boolean);
-    $('#String').text(object.String);
-    showAlboms(object.The_Beatles_discography);
-      
-
-
+	  $("div").text("The DOM is now loaded and can be manipulated.");
+$("p").text("The DOM is now loaded and can be manipulated.");
+var request = new XMLHttpRequest();
+   request.open("GET", "Beatles.json", false);
+   request.send(null);
+   var cart = JSON.parse(request.responseText);
+   showAlboms(cart.The_Beatles_discography);  
     });
-	
-});
+
 
 function showAlboms(The_Beatles_discography){
-	for (albom of The_Beatles_discography)
+	for (var i=0; i<The_Beatles_discography.length; i++)
 	{
-		var string = '';
-		string+='<p>' + albom.Title + ' was released on ' + albom.Released;
-    
-    if ("Label" in albom) {
-      string+='. It's Label is ' + albom.Label;
-    };
-    
-    if ("Songs" in albom) {
-      string+='. It's songs are: '+ albom.Songs[0];
-      for(var i=1; i<albom.Songs.length; i++){
-	      string+=', ' + albom.Songs[i];
+		var str = '';
+str+='<p>'+ The_Beatles_discography[i].Title + ' was released on ' + The_Beatles_discography[i].Released;
+if ('Label' in The_Beatles_discography[i]) {
+ str+=" It's Label is " + The_Beatles_discography[i].Label;
+    }
+if ('Songs' in The_Beatles_discography[i]) {
+str+=". It's songs are:" +The_Beatles_discography[i].Songs[0];
+   for(var j=1; j<The_Beatles_discography[i].Songs.length;j++){	      str+=", " + The_Beatles_discography[i].Songs[j];
 	    }
-      string+='. ';
+      str+='. ';
     };
-    
-     if ("Certifications" in albom) {
-      string+=' It's certifications are: '+ albom.Certifications[0];
-      for(var i=1; i<albom.Certifications.length; i++){
-	      string+=', ' + albom.Certifications[i];
+
+     if ("Certifications" in The_Beatles_discography[i]) {
+      str+=" It's certifications are: "+ The_Beatles_discography[i].Certifications[0];
+      for(var j=1; j<The_Beatles_discography[i].Certifications.length; j++){
+	      str+=', ' + The_Beatles_discography[i].Certifications[j];
 	    }
-      string+='. ';
+      str+='. ';
     };
-    
-     string+=</p>';
-	$('#albomlist').append(string);
+
+str+= '</p>';
+		$('#albomlist').append(str);
 	}
         
 };
