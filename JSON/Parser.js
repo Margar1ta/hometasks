@@ -19,7 +19,7 @@ function showAlboms(The_Beatles_discography){
     
     if ("Label" in albom) {
       string+='. It's Label is ' + albom.Label;
-    }
+    };
     
     if ("Songs" in albom) {
       string+='. It's songs are: '+ albom.Songs[0];
@@ -27,7 +27,7 @@ function showAlboms(The_Beatles_discography){
 	      string+=', ' + albom.Songs[i];
 	    }
       string+='. ';
-    }
+    };
     
      if ("Certifications" in albom) {
       string+=' It's certifications are: '+ albom.Certifications[0];
@@ -35,10 +35,10 @@ function showAlboms(The_Beatles_discography){
 	      string+=', ' + albom.Certifications[i];
 	    }
       string+='. ';
-    }
+    };
     
      string+=</p>';
-		$('#albomlist').append(string);
+	$('#albomlist').append(string);
 	}
         
 };
