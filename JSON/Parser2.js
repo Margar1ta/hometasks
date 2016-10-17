@@ -28,9 +28,9 @@ function showAlboms(The_Beatles_discography){
 
 	{
 
-		var str = '<table><'tr><th>Titile</th><th>Release date</th><th>Label</th><th>Songs</th></tr>;
+		var str = '<table><tr><th>Title</th><th>Release date</th><th>Label</th><th>Songs</th><th>Certifications</th></tr>';
 
-str+='<tr><tb>'+The_Beatles_discography[i].Title+'</tb><tb> + The_Beatles_discography[i].Released+'<tb>';
+str+='<tr><tb>'+The_Beatles_discography[i].Title+'</tb><tb> + The_Beatles_discography[i].Released+'</tb>';
 
 if ('Label' in The_Beatles_discography[i]) {
 
@@ -48,13 +48,13 @@ str+='<tb>'+The_Beatles_discography[i].Songs[0];
 
       str+='</tb>';
 
-    };e
+    }; else str+='<tb></tb>'
 
 
 
      if ("Certifications" in The_Beatles_discography[i]) {
 
-      str+=" It's certifications are: "+ The_Beatles_discography[i].Certifications[0];
+      str+='<tb>'+ The_Beatles_discography[i].Certifications[0];
 
       for(var j=1; j<The_Beatles_discography[i].Certifications.length; j++){
 
@@ -62,13 +62,13 @@ str+='<tb>'+The_Beatles_discography[i].Songs[0];
 
 	    }
 
-      str+='. ';
+      str+='.</tb>';
 
-    };
+    }; else str+='<tb></tb></tr>'
 
 
 
-str+= '</p>';
+str+= '</table>';
 
 		$('#albomlist').append(str);
 
