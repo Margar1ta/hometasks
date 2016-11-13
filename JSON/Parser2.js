@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 
 $("p").text("The DOM is now loaded and can be manipulated.");
-
+	/*
 var request = new XMLHttpRequest();
 
    request.open("GET", "Beatles.json", false);
@@ -75,6 +75,6 @@ str+= '</table>';
 	}
 
         
-
+*/
 };
 }
