@@ -1,3 +1,4 @@
+function JSON_PARSER() {
 $(document).ready(function(){
 
 	  $("div").text("The DOM is now loaded and can be manipulated.");
@@ -38,3 +39,4 @@ str+= '</p>';
 	}
         
 };
+}
