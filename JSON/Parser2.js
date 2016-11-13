@@ -1,3 +1,4 @@
+function JSON_PARSER() {
 $(document).ready(function(){
 
 
@@ -77,3 +78,4 @@ str+= '</table>';
         
 
 };
+}
