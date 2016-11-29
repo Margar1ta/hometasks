@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ <head> <title>SVG  kodaktor.ru/editor  kodaktor.ru/svg_0</title> 
+ <meta charset="UTF-8">
+  <style>
+   body { 
+    background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' %3E%3Cellipse fill='%23888800' stroke='%23000000' opacity='0.4' stroke-width='5' cx='30' cy='30' rx='20' ry='20'/%3E%3C/svg%3E");
+      margin-left: 0px;
+      
+    }
+	form {
+  text-align: center;
+}
+   </style>
+   <script type="text/javascript">
+  
+	        function Change ()
+	        { 
+  var Svg = $("#Svg_editor").val();
+  var S=Svg
+         .replace(/</g, "%3C")
+		 .replace(/"/g, "'")
+         .replace(/>/g, "%3E")
+         .replace(/#/g, "%23")
+         .replace(/\s{2,}/g, " ");
+  $("body").attr("style", "background-image: url(\"data:image/svg+xml,"+S+"\");");
+} 
+	       </script>
+  </head>
+ <body><!-- кодируем с помощью  http://yoksel.github.io/url-encoder/ru/  -->
+ <div style="margin: -6px 0px -8px 0px"></div> 
+ <svg xmlns='http://www.w3.org/2000/svg' width="60" height="60" >
+      <ellipse fill="#00FF00" stroke="#000000" 
+               opacity="0.4" stroke-width="5" 
+               cx="30" cy="30"  
+               rx="20" ry="20"/>
+    </svg>
+ <form name="test"  action="">
+  <p><b>SVG:</b><br>
+    <textarea name="Svg_editor" id="Svg_editor" cols="40" rows="3"><svg xmlns='http://www.w3.org/2000/svg' width="60" height="60" >
+      <ellipse fill="#00FF00" stroke="#000000" 
+               opacity="0.4" stroke-width="5" 
+               cx="30" cy="30"  
+               rx="20" ry="20"/>
+    </svg></textarea>
+  </p>
+  
+  <p><input type="button" value="Изменить" onclick="Change()"></p>
+ </form>
+
+   <div style="margin: -6px 0px -8px 0px"></div> 
+    
+ <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/scripts.js"></script>
+ </body>
+</html>
