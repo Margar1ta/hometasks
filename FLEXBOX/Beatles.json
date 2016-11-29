@@ -1,0 +1,74 @@
+{
+  "The_Beatles_discography": [
+    {
+    "Title": "Please Please Me",
+    "Released": "22 March 1963",
+    "Songs": [
+      "I Saw Her Standing There",
+      "Chains ",
+      "Boys "
+      ]
+    
+  },
+  {
+    "Title": "With the Beatles",
+    "Released": "22 November 1963"
+  },
+  {
+    "Title": "A Hard Day’s Night",
+    "Released": "26 June 1964",
+    "Label": "United Artists (US)"
+  },
+  {
+    "Title": "Beatles For Sale",
+    "Released": "4 December 1964"
+  },
+  {
+    "Title": "Help!",
+    "Released": "6 August 1965",
+    "Songs": [
+      "Help!",
+      "I Need You ",
+      "Another Girl"
+      ]
+    
+  },
+  {
+    "Title": "Rubber Soul",
+    "Released": "3 December 1965",
+    "Label": "Parlophone (UK)",
+    "Certifications": [
+      "BPI: Platinum",
+      "ARIA: Platinum",
+      "BVMI: Gold"
+      ]
+  },
+  {
+    "Title": "Revolver",
+    "Released": "5 August 1966",
+    "Label": "Label: Parlophone (UK)"
+  },
+  {
+    "Title": "Sgt. Pepper’s Lonely Hearts Club Band",
+    "Released": "1 June 1967"
+  },
+  {
+    "Title": "The Beatles",
+    "Released": "22 November 1968"
+  },
+   {
+    "Title": "Yellow Submarine",
+    "Released": "17 January 1969"
+  },
+  {
+    "Title": "Abbey Road",
+    "Released": "26 September 1969"
+  },
+  {
+    "Title": "Let It Be",
+    "Released": "22 November 1968"
+  }
+  ],
+  "Boolean": true,
+  "String": "Beatles are the best"
+}
