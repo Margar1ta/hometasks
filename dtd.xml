@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE CINEMA [
+<!ENTITY AUTOR "Iakovleva Margarita" >
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT type (#PCDATA) >
+
+<!ELEMENT year (#PCDATA) >
+<!ELEMENT rating (#PCDATA) >
+<!ELEMENT description (#PCDATA) >
+<!ELEMENT FILM (type,name,year,rating?,description?) >
+<!ATTLIST FILM 
+   id	CDATA	#REQUIRED >
+<!ELEMENT CINEMA (FILM+) >
+]>
+
+
+<?xml-stylesheet type="text/xsl" href="lang1.xsl" ?>
+<CINEMA>
+	<FILM id="1">
+		
+		<name>Моана</name>
+		<type>Мультфильм</type>
+		<year>2016</year>
+		<rating>7.9</rating>
+		<description></description>
+	</FILM>
+	<FILM id="2">
+		
+		<name>Союзники</name>
+		<type>Фильм</type>
+		<year>2016</year>
+		<rating>7.4</rating>
+		<description></description>
+	</FILM>
+	<FILM id="3">
+
+		<name>Доктор Стрендж</name>
+		<type>Фильм</type>
+		<year>2016</year>
+		<rating>7.8</rating>
+		<description></description>
+	</FILM>
+</CINEMA>
