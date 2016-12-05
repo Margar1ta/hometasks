@@ -26,8 +26,7 @@ $(document).ready(function(){
 		case '>' :
 		if (stack.length == 0)  {
 			diagnoz =  'Плохо';
-			alert( 'Плохая строка' );
-		}else{                 //alert( stack.indexOf("{") );
+					}else{                 //alert( stack.indexOf("{") );
 			 if (stack[stack.length - 1] == lessif(c))  {
 				 stack.pop();
 			}else{
