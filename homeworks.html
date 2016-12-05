@@ -1,0 +1,142 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MathJax MathML Test Page</title>
+<script src="Brakets.js"></script>
+	 <link href="Brakets.css" rel="stylesheet"> </link>
+<script type="text/javascript" async
+  src="MathJax.js">
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+ <script type="text/javascript" src="J/Parser2.js"></script> 
+<style>
+   body { 
+    background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' %3E%3Cellipse fill='%23E8E8E0' stroke='%23F0F0F0' opacity='0.4' stroke-width='5' cx='30' cy='30' rx='20' ry='20'/%3E%3C/svg%3E");
+      margin-left: 0px;
+      
+    }
+	form {
+  text-align: center;
+}
+   </style>
+   <script type="text/javascript">
+  
+	        function Change ()
+	        { 
+  var Svg = $("#Svg_editor").val();
+  var S=Svg
+         .replace(/</g, "%3C")
+		 .replace(/"/g, "'")
+         .replace(/>/g, "%3E")
+         .replace(/#/g, "%23")
+         .replace(/\s{2,}/g, " ");
+  $("body").attr("style", "background-image: url(\"data:image/svg+xml,"+S+"\");");
+} 
+	       </script>
+</head>
+<body>
+<h3>MathJax</h3>
+
+<p>
+Возрастающая геометрическая прогрессия:
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  
+  <mi>q</mi><mo>=</mo>
+  <mrow>
+    <mfrac>
+      <mrow>
+        <msub>
+          <mi>a</mi>
+          <mn>n+1</mn>
+        </msub>
+      </mrow>
+      <mrow>
+        <msub>
+          <mi>a</mi>
+          <mn>n</mn>
+        </msub>
+      </mrow></mfrac>
+  </mrow> 
+</math>
+  Убывающая геометрическая прогрессия:
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+   <msub>
+          <mi>a</mi>
+          <mn>n</mn>
+        </msub>
+  <mo>=</mo>
+  <msub>
+          <mi>a</mi>
+          <mn>1</mn>
+        </msub><mo>*</mo>
+  <msup>
+          <mi>q</mi>
+          <mn>n-1</mn>
+        </msup>
+  </math>
+  <p>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msup>
+<mo class="MathClass-op">sin</mo>
+<mn>2</mn>
+</msup>
+<mrow> <mi>α</mi> </mrow>
+<mo class="MathClass-bin">+</mo>
+<msup>
+<mo class="MathClass-op"> cos</mo>
+<mn>2</mn>
+</msup>
+<mrow><mi>α</mi></mrow>
+<mo class="MathClass-rel">=</mo>
+<mn>1</mn>
+</math></p>
+</p>
+<p><h2>Задачи </h2><br>
+<p><h4>Задание #1:</h4> Дополнить приведённую в лк грамматику правилами,
+позволяющими получаить сбалансированные цепочки со скобками разных видов, включая квадратные и фигурные.
+Грамматика:
+C->CC|(C)|<C>|[C]|{C}|e</br>
+Пример:
+С->(С)->({C})->({[C]})->({[CC]})->({[<C>C]})->({[<C><C>]})->({[<><C>]})->({[<><>]})</p>
+<p><h4>Задание #2:</h4> Как получить цепочки вида (()) и не получить цепочки вида ()()?</br>
+
+Ответ1: из грамматики С->CC|(C)|e необходимо убрать правило С->CC 
+
+С->(C)|e</br>
+Пример:
+С->(C)->((C))->(((C)))->((()))</br>
+Ответ2: Необходимо дополнить грамматику правилом: D->(C)</br>
+ Пример:
+D->(C)->(CC)->((C)C)->((C)(C))</p>
+<form name="test"  action="">
+  <p><h2>СКОБКИ </h2><br>
+    <textarea name="Brakets_editor" id="Brakets_editor" cols="30" rows="3"></textarea>
+  </p>
+  
+  <p><input type="button" value="Проверить" onclick="Brakets_PARSER()"></p>
+ </form>
+<h2>SVG</h2>
+<form name="test"  action="">
+  <p><b>SVG:</b><br>
+    <textarea name="Svg_editor" id="Svg_editor" cols="40" rows="3"><svg xmlns='http://www.w3.org/2000/svg' width="60" height="60" >
+      <ellipse fill="#DCFFDC" stroke="#F0F0F0" 
+               opacity="0.4" stroke-width="5" 
+               cx="30" cy="30"  
+               rx="20" ry="20"/>
+    </svg></textarea>
+  </p>
+  
+  <p><input type="button" value="Изменить" onclick="Change()"></p>
+ </form>
+ <h2><a href="JSON.html">JSON<a></h2>
+ 
+ <h2><a href="J/JSON.html">FLEXBOX<a></h2>
+ 
+ <h2><a href="dtd.xml">DTD<a></h2>
+ 
+ <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	
+	
+</body>
+</html>
